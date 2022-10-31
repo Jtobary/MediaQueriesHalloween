@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fasthand', cursive;
+
+}
+.contenedor{
+    width: 100vw;
+}
+.MenuNavegacion{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #e55100;
+    color: aliceblue;
+    
+}
+.MenuNavegacion h1{
+width: 80vw;
+padding-left: 20px;
+
+
+}
+.dibu-menu{
+    align-self: flex-end;
+}
+h2{
+    text-align: center;
+    padding-top: 10px;
+    font-size: small;
+    font-family:sans-serif
+    
+}
+h5{
+    text-align: center;
+   
+}
+/*button{
+    background-color: #e55100;
+}*/
+.filtros{
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+}
+.dropdown{
+    align-content: center;
+    padding-left: 30vw;
+    padding-bottom: 10px;
+}
+.Principal{
+    background-color: rgb(200, 201, 201);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+}
+.card{
+    margin:20px;
+}
+
+.pie{
+    display: flex;
+    flex-direction: column;
+    background-color: #e55100;
+    align-items: center;
+    padding: 20px;
+    color: aliceblue;
+}
+.MenuNavegacion{
+    grid-area: "menu";
+}
+.filtros{
+    grid-area: "filtros";
+}
+.Principal{
+    grid-area: "principal";
+}
+.pie{
+    grid-area: "pie";
+}
+.contenedor{
+    display: grid;
+    grid-template-areas:
+    'menu'
+    'filtros'
+    'principal'
+    'pie';
+}
+
+@media (min-width: 576px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas:
+        'menu filtros filtros filtros filtros'
+        'menu principal principal principal principal'
+        'menu principal principal principal principal'
+        'pie pie pie pie pie';
+    }
+    /*.MenuNavegacion{
+        width: 30%
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        
+    }*/
+   
